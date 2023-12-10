@@ -1,0 +1,7 @@
+<div class="{{baseClass}} {{positionClass}}">
+    <span class="arrow {{positionClass}}"></span>
+    <ng-container [ngTemplateOutlet]="titleTemplate || defaultTemplate"
+                  [ngTemplateOutletContext]="titleTemplateContext">
+    </ng-container>
+    <ng-template #defaultTemplate>{{title}}</ng-template>
+</div>

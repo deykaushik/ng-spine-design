@@ -1,0 +1,17 @@
+<h3>Basic Tooltip</h3>
+<br />
+<span ngxTooltip
+      [title]="'Tooltip with plain text'">Tooltip</span>
+<br /><br />
+<h3>Dynamic Template with dynamic context data</h3>
+<br />
+<span ngxTooltip
+      [titleTemplate]="tooltipTemplate"
+      [titleTemplateContext]="{$implicit:'test'}">Tooltip</span>
+
+<ng-template #tooltipTemplate
+             let-data>
+    This is tooltip template {{data}}
+</ng-template>
+
+<br /><br />
